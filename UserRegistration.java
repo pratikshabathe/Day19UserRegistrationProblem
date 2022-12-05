@@ -20,7 +20,8 @@ public class UserRegistration {
 	}
 	
 	public static void isValidEmail(String email) {
-		String regex = "^[A-Za-z0-9.]+[@][a-z]{3,5}[.][a-z]{2,5}$";
+		//String regex = "^[A-Za-z0-9.]+[@][a-z]{3,5}[.][a-z]{2,5}$";
+		String regex = "^[a-zA-z0-9.]+[@][a-zA-Z]{3,}[.][a-zA-Z]{2,5}$";;
 		if(validate(regex, email))
 			System.out.println("valid");
 		else
@@ -30,10 +31,18 @@ public class UserRegistration {
 	public static void isValidPhoneNumber(String phNum) {
 		System.out.println(phNum);
 		//String regex = "^[+]\\d{2}?\\d{10}$";
-		String regex = "^[+][0-9]{1,3}(-[0-9]{1,3})?\\s{0,3}[6-9]{1}[0-9]{9}$";	
+		String regex = "^[0-9]{2}\\s{0,1}[0-9]{10}$";	
 		if(validate(regex, phNum))
 			System.out.println("valid");
 		else
 			System.out.println("Invalid");	
+	}
+	
+	public static void isValidPassword(String password) {
+		String regex = "^[a-zA-Z]{8,}$";
+		if(validate(regex, password))
+			System.out.println("valid");
+		else
+			System.out.println("Invalid");
 	}
 }

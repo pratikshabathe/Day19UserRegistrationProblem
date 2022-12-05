@@ -28,6 +28,11 @@ public class Main {
 			sc.nextLine();
 			String phNum = sc.nextLine();
 			UserRegistration.isValidEmail(phNum);
+			
+		case 5:
+			System.out.println("Enter an password: ");
+			String password = sc.next();
+			UserRegistration.isValidEmail(password);
 		}
 	}
 }
